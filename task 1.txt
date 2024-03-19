@@ -1,0 +1,23 @@
+Difference between HTTP1.1 vs HTTP2
+
+HTTP1.1:-
+=> It works on the textual format.
+=> There is head of line blocking that blocks all the requests behind it until it doesn’t get its all resources.
+=> It uses requests resource Inlining for use getting multiple pages
+=> It compresses data by itself.
+=> A text-based protocol uses plain text to encode and transmit data.
+=> The client sends a request to a server, and the server sends a response back to the client.
+=> A separate connection is established for each request and response, which can add overhead and latency to the communication process.
+=> HTTP 1.1 cannot handle buffer overflow vulnerabilities due to the lack of sufficient measures.
+=> HTTP 1.1 does not include any in-built features, so the performance it delivers is less efficient.
+
+HTTP2:-
+=> It works on the binary protocol.
+=> It allows multiplexing so one TCP connection is required for multiple requests.
+=> It uses PUSH frame by server that collects all multiple pages 
+=> It uses HPACK for data compression.
+=> It works on the binary protocol as a series of binary codes encode and transmit data rather than plain text.
+=> A different underlying protocol called Secure Remote Protocol 2 (SRP2) establishes a secure connection between a client and a server
+=> It allows multiplexing so multiple requests and responses can be sent over a single connection.
+=> HTTP 2 includes measures to prevent buffer overflow vulnerabilities.
+=> HTTP 2 is designed to be more efficient and performant than HTTP 1.1. This is because HTTP 2 includes several features like multiplexing, binary protocol and header compression.
